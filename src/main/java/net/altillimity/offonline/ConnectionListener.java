@@ -18,20 +18,35 @@ public class ConnectionListener implements Listener {
     @EventHandler(priority = 64)
     public void onPreLogin(PreLoginEvent e) {
         PendingConnection connection = e.getConnection();
-        if(MysqlUtils.isUserAllowed(connection.getName())){
-            System.out.println("Allowing "+connection.getName()+" to connect in OFFLINE mode.");
+        if (MysqlUtils.isUserAllowed(connection.getName())) {
+            System.out.println("Allowing " + connection.getName() + " to connect in OFFLINE mode.");
             connection.setOnlineMode(false);
+            OffOnline.loggeds.put(connection.getName(), false);
         } else {
-            System.out.println("Connecting "+connection.getName()+" in ONLINE mode.");
+            System.out.println("Connecting " + connection.getName() + " in ONLINE mode.");
             connection.setOnlineMode(true);
         }
     }
+
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onLogin(ServerConnectEvent e) {
         String name = e.getPlayer().getName();
         ServerInfo target = ProxyServer.getInstance().getServerInfo("login");
-        if(MysqlUtils.isUserAllowed(name)){
-            e.setTarget(target);
-        } 
+        if (OffOnline.loggeds.containsKey(name)) {
+            if (!OffOnline.loggeds.get(name))
+                e.setTarget(target);
+        }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onChat(ChatEvent e) {
+        ProxiedPlayer p = (ProxiedPlayer) e.getSender();
+        String name = p.getName();
+        if (OffOnline.loggeds.containsKey(name)) {
+            if (!OffOnline.loggeds.get(name)) {
+                if (!e.getMessage().startsWith("/login"))
+                    e.setCancelled(true);
+            }
+        }
     }
 }

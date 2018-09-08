@@ -6,19 +6,15 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MysqlConnect {
-    // init database constants
     private static final String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DATABASE_URL = "jdbc:mysql://192.168.0.48:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "pass";
+    private static final String DATABASE_URL = "jdbc:mysql://192.168.1.16:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private static final String USERNAME = "mc";
+    private static final String PASSWORD = "minecraft";
     private static final String MAX_POOL = "250";
 
-    // init connection object
     private Connection connection;
-    // init properties object
     private Properties properties;
 
-    // create properties
     private Properties getProperties() {
         if (properties == null) {
             properties = new Properties();
@@ -29,7 +25,6 @@ public class MysqlConnect {
         return properties;
     }
 
-    // connect database
     public Connection connect() {
         if (connection == null) {
             try {
@@ -42,7 +37,6 @@ public class MysqlConnect {
         return connection;
     }
 
-    // disconnect database
     public void disconnect() {
         if (connection != null) {
             try {
