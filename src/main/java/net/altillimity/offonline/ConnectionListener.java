@@ -49,4 +49,10 @@ public class ConnectionListener implements Listener {
             }
         }
     }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onLogin(PlayerDisconnectEvent e) {
+        String name = e.getPlayer().getName();
+        if(OffOnline.loggeds.containsKey(name)) OffOnline.loggeds.remove(name);
+    }
 }
