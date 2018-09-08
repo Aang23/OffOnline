@@ -1,0 +1,36 @@
+[17:50:37] [main/INFO]: Using mbed TLS based native cipher.
+[17:50:37] [main/INFO]: Using zlib based native compressor.
+[17:50:37] [main/INFO]: Enabled Waterfall version git:Waterfall-Bootstrap:1.13-SNAPSHOT:17e4f19:219
+[17:50:37] [main/INFO]: Not on Windows, attempting to use enhanced EpollEventLoop
+[17:50:37] [main/INFO]: Epoll is working, utilising it!
+[17:50:37] [main/INFO]: Discovered module: ModuleSpec(name=cmd_alert, file=modules/cmd_alert.jar, provider=JenkinsModuleSource())
+[17:50:37] [main/INFO]: Discovered module: ModuleSpec(name=cmd_find, file=modules/cmd_find.jar, provider=JenkinsModuleSource())
+[17:50:37] [main/INFO]: Discovered module: ModuleSpec(name=cmd_list, file=modules/cmd_list.jar, provider=JenkinsModuleSource())
+[17:50:37] [main/INFO]: Discovered module: ModuleSpec(name=cmd_send, file=modules/cmd_send.jar, provider=JenkinsModuleSource())
+[17:50:37] [main/INFO]: Discovered module: ModuleSpec(name=cmd_server, file=modules/cmd_server.jar, provider=JenkinsModuleSource())
+[17:50:37] [main/INFO]: Discovered module: ModuleSpec(name=reconnect_yaml, file=modules/reconnect_yaml.jar, provider=JenkinsModuleSource())
+[17:50:37] [main/INFO]: Loaded plugin reconnect_yaml version git:reconnect_yaml:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Loaded plugin OffOnline version 1.0 by Aang23
+[17:50:37] [main/INFO]: Loaded plugin cmd_find version git:cmd_find:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Loaded plugin cmd_server version git:cmd_server:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Loaded plugin cmd_alert version git:cmd_alert:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Loaded plugin cmd_send version git:cmd_send:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Loaded plugin cmd_list version git:cmd_list:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/WARN]: Forced host server pvp is not defined
+[17:50:37] [main/INFO]: Enabled plugin reconnect_yaml version git:reconnect_yaml:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: 1
+[17:50:37] [main/INFO]: false
+[17:50:37] [main/INFO]: Enabled plugin OffOnline version 1.0 by Aang23
+[17:50:37] [main/INFO]: Enabled plugin cmd_find version git:cmd_find:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Enabled plugin cmd_server version git:cmd_server:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Enabled plugin cmd_alert version git:cmd_alert:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Enabled plugin cmd_send version git:cmd_send:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [main/INFO]: Enabled plugin cmd_list version git:cmd_list:1.13-SNAPSHOT:17e4f19:219 by WaterfallMC
+[17:50:37] [Netty Boss IO Thread #0/INFO]: Listening on /0.0.0.0:25577
+[17:50:39] [Shutdown Thread/INFO]: Closing listener [id: 0x34d72ffd, L:/0:0:0:0:0:0:0:0%0:25577]
+[17:50:39] [Shutdown Thread/INFO]: Closing pending connections
+[17:50:39] [Shutdown Thread/INFO]: Disconnecting 0 connections
+[17:50:40] [Shutdown Thread/INFO]: Saving reconnect locations
+[17:50:40] [Shutdown Thread/INFO]: Disabling plugins
+[17:50:40] [Shutdown Thread/INFO]: Closing IO threads
+[17:50:42] [Shutdown Thread/INFO]: Thank you and goodbye
